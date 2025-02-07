@@ -1,0 +1,23 @@
+Company,Device,Type,Controller Type
+Valve,Index Controller,Controller,knuckles
+Valve,Knuckles Devkits (ev2+),Controller,knuckles
+HTC,Vive Pro Controller,Controller,vive_controller
+HTC,Vive Controller,Controller,vive_controller
+HTC,Vive Controller (Pre),Controller,vive_controller
+HTC,Vive Cosmos Controller,Controller,vive_cosmos_controller
+HTC,Vive Tracker,Controller(ish),vive_tracker[role]
+Oculus,Touch (CV1),Controller,oculus_touch
+Oculus,Touch (Rift S),Controller,oculus_touch
+Oculus,Touch (Quest 1),Controller,oculus_touch
+Oculus,Touch (Quest 2),Controller,oculus_touch
+Microsoft,WinMR Devkit,Controller,holographic_controller
+Samsung,WinMR Odyssey+,Controller,holographic_controller
+Misc,WinMR Generic,Controller,holographic_controller
+HP,Reverb G2 Controller,Controller,hp_motioncontroller
+Valve,Index HMD,Headset,indexhmd
+HTC,Vive HMD,Headset,vive
+HTC,Vive Pro HMD,Headset,vive_pro
+HTC,Vive Cosmos HMD,Headset,vive_cosmos
+Oculus,Rift,Headset,rift
+Microsoft (Misc),WinMR Generic HMD,Headset,holographic_hmd
+HP,Reverb G2,Headset,holographic_hmd
