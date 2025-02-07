@@ -289,19 +289,28 @@
 #    Data properties
 #################################################################
 
-###  http://www.semanticweb.org/marti/ontologies/2025/virtualreality#AspectRatio
+###  http://www.semanticweb.org/marti/ontologies/2025/virtualreality#DisplayType
+:DisplayType rdf:type owl:DatatypeProperty ;
+             rdfs:subPropertyOf :DisplayProperties ;
+             rdfs:domain :Displays ;
+             rdfs:range xsd:string ;
+             rdfs:comment "Describes the display technology (LCD, OLED, etc.)" ;
+             rdfs:label "Display Type" .
+
+
+###  http://www.semanticweb.org/marti/ontologies/2025/virtualreality#Tracking
+:Tracking rdf:type owl:DatatypeProperty ;
+          rdfs:comment "Describes what king of tracking the headset provides" ;
+          rdfs:label "Tracking" .
+
+
+###  http://www.semanticweb.org/marti/ontologies/2025/virtualreality/AspectRatio
 :AspectRatio rdf:type owl:DatatypeProperty ;
              rdfs:subPropertyOf :DisplayProperties ;
+             rdfs:domain :Displays ;
+             rdfs:range xsd:string ;
              rdfs:comment "Aspect ratio" ;
-             rdfs:label "AspectRatio" .
-
-
-###  http://www.semanticweb.org/marti/ontologies/2025/virtualreality#ReleaseDate
-:ReleaseDate rdf:type owl:DatatypeProperty ;
-             rdfs:domain :HeadMountedDisplays ;
-             rdfs:range xsd:dateTime ;
-             rdfs:comment "Date when the product became publicly available" ;
-             rdfs:label "Release Date" .
+             rdfs:label "Aspect Ratio" .
 
 
 ###  http://www.semanticweb.org/marti/ontologies/2025/virtualreality/BatteryLevel
@@ -334,7 +343,7 @@
 :FieldOfView rdf:type owl:DatatypeProperty ;
              rdfs:subPropertyOf :DisplayProperties ;
              rdfs:domain :HeadMountedDisplays ;
-             rdfs:range xsd:float ;
+             rdfs:range xsd:string ;
              rdfs:comment "Represents the field of view of a head-mounted display in degrees."@en ;
              rdfs:label "Field of View"@en .
 
@@ -419,6 +428,14 @@
              rdfs:range xsd:int ;
              rdfs:comment "Represents the refresh rate of a display in Hz."@en ;
              rdfs:label "Refresh Rate"@en .
+
+
+###  http://www.semanticweb.org/marti/ontologies/2025/virtualreality/ReleaseDate
+:ReleaseDate rdf:type owl:DatatypeProperty ;
+             rdfs:domain :HeadMountedDisplays ;
+             rdfs:range xsd:dateTime ;
+             rdfs:comment "Date when the product became publicly available" ;
+             rdfs:label "Release Date" .
 
 
 ###  http://www.semanticweb.org/marti/ontologies/2025/virtualreality/Resolution
@@ -803,26 +820,1127 @@
 #    Individuals
 #################################################################
 
-###  http://www.semanticweb.org/marti/ontologies/2025/virtualreality/AcerAH101
+###  http://www.semanticweb.org/marti/ontologies/2025/virtualreality#RazerOSVRHDK1.4
+:RazerOSVRHDK1.4 rdf:type owl:NamedIndividual ,
+				:HeadMountedDisplays ;
+				:connectedTo :RazerOSVRHDK1.4 ;
+				:tracks :RazerOSVRHDK1.4 ;
+				:supports :RazerOSVRHDK1.4 ;
+				:renders :RazerOSVRHDK1.4 ;
+				:providesData :RazerOSVRHDK1.4 ;
+				:Name "RazerOSVRHDK1.4" ;
+				:DisplayType "OLED" ;
+				:AspectRatio "8:9" ;
+				:FieldOfView "100°" ;
+				:RefreshRate "90 Hz" ;
+				:ReleaseDate "2015-11-23T00:00:00+00:00"^^xsd:dateTime ;
+				:Tracking "yes" ;
+				:Resolution "960×1080" .
+
+###  http://www.semanticweb.org/marti/ontologies/2025/virtualreality#OculusRiftCV1
+:OculusRiftCV1 rdf:type owl:NamedIndividual ,
+				:HeadMountedDisplays ;
+				:connectedTo :OculusRiftCV1 ;
+				:tracks :OculusRiftCV1 ;
+				:supports :OculusRiftCV1 ;
+				:renders :OculusRiftCV1 ;
+				:providesData :OculusRiftCV1 ;
+				:Name "OculusRiftCV1" ;
+				:DisplayType "OLED" ;
+				:AspectRatio "9:10" ;
+				:FieldOfView "94°" ;
+				:RefreshRate "90 Hz" ;
+				:ReleaseDate "2016-03-28T00:00:00+00:00"^^xsd:dateTime ;
+				:Tracking "outside-in (constellation)" ;
+				:Resolution "1080×1200" .
+
+###  http://www.semanticweb.org/marti/ontologies/2025/virtualreality#HTCVive
+:HTCVive rdf:type owl:NamedIndividual ,
+				:HeadMountedDisplays ;
+				:connectedTo :HTCVive ;
+				:tracks :HTCVive ;
+				:supports :HTCVive ;
+				:renders :HTCVive ;
+				:providesData :HTCVive ;
+				:Name "HTCVive" ;
+				:DisplayType "OLED" ;
+				:AspectRatio "9:10" ;
+				:FieldOfView "110°" ;
+				:RefreshRate "90 Hz" ;
+				:ReleaseDate "2016-04-05T00:00:00+00:00"^^xsd:dateTime ;
+				:Tracking "yes" ;
+				:Resolution "1080×1200" .
+
+###  http://www.semanticweb.org/marti/ontologies/2025/virtualreality#RazerOSVRHDK2
+:RazerOSVRHDK2 rdf:type owl:NamedIndividual ,
+				:HeadMountedDisplays ;
+				:connectedTo :RazerOSVRHDK2 ;
+				:tracks :RazerOSVRHDK2 ;
+				:supports :RazerOSVRHDK2 ;
+				:renders :RazerOSVRHDK2 ;
+				:providesData :RazerOSVRHDK2 ;
+				:Name "RazerOSVRHDK2" ;
+				:DisplayType "OLED" ;
+				:AspectRatio "9:10" ;
+				:FieldOfView "110°" ;
+				:RefreshRate "90 Hz" ;
+				:ReleaseDate "2000-01-01T00:00:00+00:00"^^xsd:dateTime ;
+				:Tracking "unknown" ;
+				:Resolution "1080×1200" .
+
+###  http://www.semanticweb.org/marti/ontologies/2025/virtualreality#StarBreezeStarVR
+:StarBreezeStarVR rdf:type owl:NamedIndividual ,
+				:HeadMountedDisplays ;
+				:connectedTo :StarBreezeStarVR ;
+				:tracks :StarBreezeStarVR ;
+				:supports :StarBreezeStarVR ;
+				:renders :StarBreezeStarVR ;
+				:providesData :StarBreezeStarVR ;
+				:Name "StarBreezeStarVR" ;
+				:DisplayType "LCD" ;
+				:AspectRatio "16:9" ;
+				:FieldOfView "210° Horizontal  130° Vertical" ;
+				:RefreshRate "90 Hz" ;
+				:ReleaseDate "2000-01-01T00:00:00+00:00"^^xsd:dateTime ;
+				:Tracking "outside-in, external optical sensor with fiducial markers" ;
+				:Resolution "2560x1440" .
+
+###  http://www.semanticweb.org/marti/ontologies/2025/virtualreality#PlayStationVR
+:PlayStationVR rdf:type owl:NamedIndividual ,
+				:HeadMountedDisplays ;
+				:connectedTo :PlayStationVR ;
+				:tracks :PlayStationVR ;
+				:supports :PlayStationVR ;
+				:renders :PlayStationVR ;
+				:providesData :PlayStationVR ;
+				:Name "PlayStationVR" ;
+				:DisplayType "OLED" ;
+				:AspectRatio "8:9" ;
+				:FieldOfView "100°" ;
+				:RefreshRate "120 Hz 90 Hz" ;
+				:ReleaseDate "2016-10-01T00:00:00+00:00"^^xsd:dateTime ;
+				:Tracking "outside-in (using the playstation camera)" ;
+				:Resolution "960×1080" .
+
+###  http://www.semanticweb.org/marti/ontologies/2025/virtualreality#Fove0
+:Fove0 rdf:type owl:NamedIndividual ,
+				:HeadMountedDisplays ;
+				:connectedTo :Fove0 ;
+				:tracks :Fove0 ;
+				:supports :Fove0 ;
+				:renders :Fove0 ;
+				:providesData :Fove0 ;
+				:Name "Fove0" ;
+				:DisplayType "OLED" ;
+				:AspectRatio "8:9" ;
+				:FieldOfView "110° (max)90° (min)" ;
+				:RefreshRate "70 Hz" ;
+				:ReleaseDate "2000-01-01T00:00:00+00:00"^^xsd:dateTime ;
+				:Tracking "yes" ;
+				:Resolution "1280x1440" .
+
+###  http://www.semanticweb.org/marti/ontologies/2025/virtualreality#Pimax4K
+:Pimax4K rdf:type owl:NamedIndividual ,
+				:HeadMountedDisplays ;
+				:connectedTo :Pimax4K ;
+				:tracks :Pimax4K ;
+				:supports :Pimax4K ;
+				:renders :Pimax4K ;
+				:providesData :Pimax4K ;
+				:Name "Pimax4K" ;
+				:DisplayType "LCD" ;
+				:AspectRatio "8:9" ;
+				:FieldOfView "110º" ;
+				:RefreshRate "60 Hz" ;
+				:ReleaseDate "2017-01-01T00:00:00+00:00"^^xsd:dateTime ;
+				:Tracking "no" ;
+				:Resolution "1920×2160" .
+
+###  http://www.semanticweb.org/marti/ontologies/2025/virtualreality#VRgineersVRHero5K
+:VRgineersVRHero5K rdf:type owl:NamedIndividual ,
+				:HeadMountedDisplays ;
+				:connectedTo :VRgineersVRHero5K ;
+				:tracks :VRgineersVRHero5K ;
+				:supports :VRgineersVRHero5K ;
+				:renders :VRgineersVRHero5K ;
+				:providesData :VRgineersVRHero5K ;
+				:Name "VRgineersVRHero5K" ;
+				:DisplayType "LCD" ;
+				:AspectRatio "16:9" ;
+				:FieldOfView "—" ;
+				:RefreshRate "90 Hz60 Hz" ;
+				:ReleaseDate "2017-03-08T00:00:00+00:00"^^xsd:dateTime ;
+				:Tracking "yes (ar tracking, optitrack and lighthouse)" ;
+				:Resolution "2560x1440" .
+
+###  http://www.semanticweb.org/marti/ontologies/2025/virtualreality#DeepoonVRE3
+:DeepoonVRE3 rdf:type owl:NamedIndividual ,
+				:HeadMountedDisplays ;
+				:connectedTo :DeepoonVRE3 ;
+				:tracks :DeepoonVRE3 ;
+				:supports :DeepoonVRE3 ;
+				:renders :DeepoonVRE3 ;
+				:providesData :DeepoonVRE3 ;
+				:Name "DeepoonVRE3" ;
+				:DisplayType "AMOLED" ;
+				:AspectRatio "8:9" ;
+				:FieldOfView "110º" ;
+				:RefreshRate "70 Hz" ;
+				:ReleaseDate "2017-03-29T00:00:00+00:00"^^xsd:dateTime ;
+				:Tracking "yes (360º laser room-scale positioning)" ;
+				:Resolution "1280x1440" .
+
+###  http://www.semanticweb.org/marti/ontologies/2025/virtualreality#DellVisor
+:DellVisor rdf:type owl:NamedIndividual ,
+				:HeadMountedDisplays ;
+				:connectedTo :DellVisor ;
+				:tracks :DellVisor ;
+				:supports :DellVisor ;
+				:renders :DellVisor ;
+				:providesData :DellVisor ;
+				:Name "DellVisor" ;
+				:DisplayType "LCD" ;
+				:AspectRatio "1:1" ;
+				:FieldOfView "110º" ;
+				:RefreshRate "90 Hz" ;
+				:ReleaseDate "2017-10-17T00:00:00+00:00"^^xsd:dateTime ;
+				:Tracking "inside-out markerless" ;
+				:Resolution "1440x1440" .
+
+###  http://www.semanticweb.org/marti/ontologies/2025/virtualreality#AcerAH101
 :AcerAH101 rdf:type owl:NamedIndividual ,
-                    :HeadAttached .
+				:HeadMountedDisplays ;
+				:connectedTo :AcerAH101 ;
+				:tracks :AcerAH101 ;
+				:supports :AcerAH101 ;
+				:renders :AcerAH101 ;
+				:providesData :AcerAH101 ;
+				:Name "AcerAH101" ;
+				:DisplayType "LCD" ;
+				:AspectRatio "1:1" ;
+				:FieldOfView "95º" ;
+				:RefreshRate "90 Hz" ;
+				:ReleaseDate "2017-10-17T00:00:00+00:00"^^xsd:dateTime ;
+				:Tracking "inside-out markerless" ;
+				:Resolution "1440x1440" .
 
+###  http://www.semanticweb.org/marti/ontologies/2025/virtualreality#HPWMRheadset
+:HPWMRheadset rdf:type owl:NamedIndividual ,
+				:HeadMountedDisplays ;
+				:connectedTo :HPWMRheadset ;
+				:tracks :HPWMRheadset ;
+				:supports :HPWMRheadset ;
+				:renders :HPWMRheadset ;
+				:providesData :HPWMRheadset ;
+				:Name "HPWMRheadset" ;
+				:DisplayType "LCD" ;
+				:AspectRatio "1:1" ;
+				:FieldOfView "95º" ;
+				:RefreshRate "90 Hz" ;
+				:ReleaseDate "2017-10-17T00:00:00+00:00"^^xsd:dateTime ;
+				:Tracking "inside-out markerless" ;
+				:Resolution "1440x1440" .
 
-###  http://www.semanticweb.org/marti/ontologies/2025/virtualreality/AlcatelVision
-:AlcatelVision rdf:type owl:NamedIndividual ,
-                        :HeadAttached .
+###  http://www.semanticweb.org/marti/ontologies/2025/virtualreality#LenovoExplorer
+:LenovoExplorer rdf:type owl:NamedIndividual ,
+				:HeadMountedDisplays ;
+				:connectedTo :LenovoExplorer ;
+				:tracks :LenovoExplorer ;
+				:supports :LenovoExplorer ;
+				:renders :LenovoExplorer ;
+				:providesData :LenovoExplorer ;
+				:Name "LenovoExplorer" ;
+				:DisplayType "LCD" ;
+				:AspectRatio "1:1" ;
+				:FieldOfView "110º" ;
+				:RefreshRate "90 Hz" ;
+				:ReleaseDate "2017-10-04T00:00:00+00:00"^^xsd:dateTime ;
+				:Tracking "inside-out markerless" ;
+				:Resolution "1440x1440" .
 
+###  http://www.semanticweb.org/marti/ontologies/2025/virtualreality#SamsungOdyssey
+:SamsungOdyssey rdf:type owl:NamedIndividual ,
+				:HeadMountedDisplays ;
+				:connectedTo :SamsungOdyssey ;
+				:tracks :SamsungOdyssey ;
+				:supports :SamsungOdyssey ;
+				:renders :SamsungOdyssey ;
+				:providesData :SamsungOdyssey ;
+				:Name "SamsungOdyssey" ;
+				:DisplayType "AMOLED" ;
+				:AspectRatio "9:10" ;
+				:FieldOfView "110º" ;
+				:RefreshRate "90 Hz" ;
+				:ReleaseDate "2017-11-07T00:00:00+00:00"^^xsd:dateTime ;
+				:Tracking "inside-out markerless" ;
+				:Resolution "1440x1600" .
 
-###  http://www.semanticweb.org/marti/ontologies/2025/virtualreality/AppleVisionPro
-:AppleVisionPro rdf:type owl:NamedIndividual ,
-                         :HeadAttached ;
-                :tracks :AppleVisionPro ;
-                :ReleaseDate "2024-02-04T00:00:00+00:00"^^xsd:dateTime .
+###  http://www.semanticweb.org/marti/ontologies/2025/virtualreality#VRgineersVRHero5KPlus
+:VRgineersVRHero5KPlus rdf:type owl:NamedIndividual ,
+				:HeadMountedDisplays ;
+				:connectedTo :VRgineersVRHero5KPlus ;
+				:tracks :VRgineersVRHero5KPlus ;
+				:supports :VRgineersVRHero5KPlus ;
+				:renders :VRgineersVRHero5KPlus ;
+				:providesData :VRgineersVRHero5KPlus ;
+				:Name "VRgineersVRHero5KPlus" ;
+				:DisplayType "OLED" ;
+				:AspectRatio "16:9" ;
+				:FieldOfView "—" ;
+				:RefreshRate "90 Hz70 Hz60 Hz" ;
+				:ReleaseDate "2017-11-29T00:00:00+00:00"^^xsd:dateTime ;
+				:Tracking "yes (ar tracking, optitrack and lighthouse)" ;
+				:Resolution "2560x1440" .
 
-
-###  http://www.semanticweb.org/marti/ontologies/2025/virtualreality/AsusHC102
+###  http://www.semanticweb.org/marti/ontologies/2025/virtualreality#AsusHC102
 :AsusHC102 rdf:type owl:NamedIndividual ,
-                    :HeadAttached .
+				:HeadMountedDisplays ;
+				:connectedTo :AsusHC102 ;
+				:tracks :AsusHC102 ;
+				:supports :AsusHC102 ;
+				:renders :AsusHC102 ;
+				:providesData :AsusHC102 ;
+				:Name "AsusHC102" ;
+				:DisplayType "LCD" ;
+				:AspectRatio "1:1" ;
+				:FieldOfView "95º" ;
+				:RefreshRate "90 Hz" ;
+				:ReleaseDate "2018-02-20T00:00:00+00:00"^^xsd:dateTime ;
+				:Tracking "inside-out markerless" ;
+				:Resolution "1440x1440" .
+
+###  http://www.semanticweb.org/marti/ontologies/2025/virtualreality#HTCVivePro
+:HTCVivePro rdf:type owl:NamedIndividual ,
+				:HeadMountedDisplays ;
+				:connectedTo :HTCVivePro ;
+				:tracks :HTCVivePro ;
+				:supports :HTCVivePro ;
+				:renders :HTCVivePro ;
+				:providesData :HTCVivePro ;
+				:Name "HTCVivePro" ;
+				:DisplayType "AMOLED" ;
+				:AspectRatio "9:10" ;
+				:FieldOfView "110°" ;
+				:RefreshRate "90 Hz" ;
+				:ReleaseDate "2018-04-05T00:00:00+00:00"^^xsd:dateTime ;
+				:Tracking "yes" ;
+				:Resolution "1440x1600" .
+
+###  http://www.semanticweb.org/marti/ontologies/2025/virtualreality#VRgineersXTAL
+:VRgineersXTAL rdf:type owl:NamedIndividual ,
+				:HeadMountedDisplays ;
+				:connectedTo :VRgineersXTAL ;
+				:tracks :VRgineersXTAL ;
+				:supports :VRgineersXTAL ;
+				:renders :VRgineersXTAL ;
+				:providesData :VRgineersXTAL ;
+				:Name "VRgineersXTAL" ;
+				:DisplayType "OLED" ;
+				:AspectRatio "16:9" ;
+				:FieldOfView "—" ;
+				:RefreshRate "70 Hz" ;
+				:ReleaseDate "2018-06-26T00:00:00+00:00"^^xsd:dateTime ;
+				:Tracking "yes (ar tracking, optitrack and lighthouse)" ;
+				:Resolution "2560x1440" .
+
+###  http://www.semanticweb.org/marti/ontologies/2025/virtualreality#SamsungOdysseyPlus
+:SamsungOdysseyPlus rdf:type owl:NamedIndividual ,
+				:HeadMountedDisplays ;
+				:connectedTo :SamsungOdysseyPlus ;
+				:tracks :SamsungOdysseyPlus ;
+				:supports :SamsungOdysseyPlus ;
+				:renders :SamsungOdysseyPlus ;
+				:providesData :SamsungOdysseyPlus ;
+				:Name "SamsungOdyssey+" ;
+				:DisplayType "AMOLED" ;
+				:AspectRatio "9:10" ;
+				:FieldOfView "110º" ;
+				:RefreshRate "90 Hz" ;
+				:ReleaseDate "2018-10-22T00:00:00+00:00"^^xsd:dateTime ;
+				:Tracking "inside-out markerless" ;
+				:Resolution "1440x1600" .
+
+###  http://www.semanticweb.org/marti/ontologies/2025/virtualreality#Pimax5KPlus
+:Pimax5KPlus rdf:type owl:NamedIndividual ,
+				:HeadMountedDisplays ;
+				:connectedTo :Pimax5KPlus ;
+				:tracks :Pimax5KPlus ;
+				:supports :Pimax5KPlus ;
+				:renders :Pimax5KPlus ;
+				:providesData :Pimax5KPlus ;
+				:Name "Pimax5KPlus" ;
+				:DisplayType "LCD" ;
+				:AspectRatio "16:9" ;
+				:FieldOfView "170º (Wide) 150º (Normal) 120º (Small)" ;
+				:RefreshRate "144 Hz120 Hz90 Hz72 Hz" ;
+				:ReleaseDate "2018-11-30T00:00:00+00:00"^^xsd:dateTime ;
+				:Tracking "inside-out markered (lighthouse)" ;
+				:Resolution "2560x1440" .
+
+###  http://www.semanticweb.org/marti/ontologies/2025/virtualreality#VRgineersXTAL
+:VRgineersXTAL rdf:type owl:NamedIndividual ,
+				:HeadMountedDisplays ;
+				:connectedTo :VRgineersXTAL ;
+				:tracks :VRgineersXTAL ;
+				:supports :VRgineersXTAL ;
+				:renders :VRgineersXTAL ;
+				:providesData :VRgineersXTAL ;
+				:Name "VRgineersXTAL(upgradedlenses)" ;
+				:DisplayType "OLED" ;
+				:AspectRatio "16:9" ;
+				:FieldOfView "—" ;
+				:RefreshRate "70 Hz" ;
+				:ReleaseDate "2018-12-11T00:00:00+00:00"^^xsd:dateTime ;
+				:Tracking "yes (ar tracking, optitrack and lighthouse)" ;
+				:Resolution "2560x1440" .
+
+###  http://www.semanticweb.org/marti/ontologies/2025/virtualreality#VarjoVR-1
+:VarjoVR-1 rdf:type owl:NamedIndividual ,
+				:HeadMountedDisplays ;
+				:connectedTo :VarjoVR-1 ;
+				:tracks :VarjoVR-1 ;
+				:supports :VarjoVR-1 ;
+				:renders :VarjoVR-1 ;
+				:providesData :VarjoVR-1 ;
+				:Name "VarjoVR-1" ;
+				:DisplayType "AMOLED, OLED" ;
+				:AspectRatio "Unknown" ;
+				:FieldOfView "87º" ;
+				:RefreshRate "60 Hz (central display) 90 Hz (peripheral display)" ;
+				:ReleaseDate "2019-02-19T00:00:00+00:00"^^xsd:dateTime ;
+				:Tracking "yes" ;
+				:Resolution "1920×1080" .
+
+###  http://www.semanticweb.org/marti/ontologies/2025/virtualreality#VarjoAero
+:VarjoAero rdf:type owl:NamedIndividual ,
+				:HeadMountedDisplays ;
+				:connectedTo :VarjoAero ;
+				:tracks :VarjoAero ;
+				:supports :VarjoAero ;
+				:renders :VarjoAero ;
+				:providesData :VarjoAero ;
+				:Name "VarjoAero" ;
+				:DisplayType "mini-LED, LCD" ;
+				:AspectRatio "Unknown" ;
+				:FieldOfView "115°" ;
+				:RefreshRate "90 Hz" ;
+				:ReleaseDate "2021-10-21T00:00:00+00:00"^^xsd:dateTime ;
+				:Tracking "yes" ;
+				:Resolution "2880x2720" .
+
+###  http://www.semanticweb.org/marti/ontologies/2025/virtualreality#Pimax8K
+:Pimax8K rdf:type owl:NamedIndividual ,
+				:HeadMountedDisplays ;
+				:connectedTo :Pimax8K ;
+				:tracks :Pimax8K ;
+				:supports :Pimax8K ;
+				:renders :Pimax8K ;
+				:providesData :Pimax8K ;
+				:Name "Pimax8K" ;
+				:DisplayType "LCD" ;
+				:AspectRatio "16:9" ;
+				:FieldOfView "170º (horizontal)130º (vertical)" ;
+				:RefreshRate "80 Hz72 Hz64 Hz" ;
+				:ReleaseDate "2019-02-19T00:00:00+00:00"^^xsd:dateTime ;
+				:Tracking "yes" ;
+				:Resolution "3840x2160" .
+
+###  http://www.semanticweb.org/marti/ontologies/2025/virtualreality#ValveIndex
+:ValveIndex rdf:type owl:NamedIndividual ,
+				:HeadMountedDisplays ;
+				:connectedTo :ValveIndex ;
+				:tracks :ValveIndex ;
+				:supports :ValveIndex ;
+				:renders :ValveIndex ;
+				:providesData :ValveIndex ;
+				:Name "ValveIndex" ;
+				:DisplayType "LCD" ;
+				:AspectRatio "9:10" ;
+				:FieldOfView "130° (maximum)" ;
+				:RefreshRate "144 Hz120 Hz90 Hz80 Hz" ;
+				:ReleaseDate "2019-05-01T00:00:00+00:00"^^xsd:dateTime ;
+				:Tracking "yes" ;
+				:Resolution "1440x1600" .
+
+###  http://www.semanticweb.org/marti/ontologies/2025/virtualreality#HPReverb
+:HPReverb rdf:type owl:NamedIndividual ,
+				:HeadMountedDisplays ;
+				:connectedTo :HPReverb ;
+				:tracks :HPReverb ;
+				:supports :HPReverb ;
+				:renders :HPReverb ;
+				:providesData :HPReverb ;
+				:Name "HPReverb" ;
+				:DisplayType "LCD" ;
+				:AspectRatio "1:1" ;
+				:FieldOfView "114º" ;
+				:RefreshRate "90 Hz" ;
+				:ReleaseDate "2019-05-06T00:00:00+00:00"^^xsd:dateTime ;
+				:Tracking "inside-out markerless" ;
+				:Resolution "2160x2160" .
+
+###  http://www.semanticweb.org/marti/ontologies/2025/virtualreality#OculusRiftS
+:OculusRiftS rdf:type owl:NamedIndividual ,
+				:HeadMountedDisplays ;
+				:connectedTo :OculusRiftS ;
+				:tracks :OculusRiftS ;
+				:supports :OculusRiftS ;
+				:renders :OculusRiftS ;
+				:providesData :OculusRiftS ;
+				:Name "OculusRiftS" ;
+				:DisplayType "LCD" ;
+				:AspectRatio "8:9" ;
+				:FieldOfView "90º" ;
+				:RefreshRate "80 Hz" ;
+				:ReleaseDate "2019-05-21T00:00:00+00:00"^^xsd:dateTime ;
+				:Tracking "inside-out (oculus insight)" ;
+				:Resolution "1280x1440" .
+
+###  http://www.semanticweb.org/marti/ontologies/2025/virtualreality#HTCViveCosmos
+:HTCViveCosmos rdf:type owl:NamedIndividual ,
+				:HeadMountedDisplays ;
+				:connectedTo :HTCViveCosmos ;
+				:tracks :HTCViveCosmos ;
+				:supports :HTCViveCosmos ;
+				:renders :HTCViveCosmos ;
+				:providesData :HTCViveCosmos ;
+				:Name "HTCViveCosmos" ;
+				:DisplayType "LCD" ;
+				:AspectRatio "72:85" ;
+				:FieldOfView "110º" ;
+				:RefreshRate "90 Hz" ;
+				:ReleaseDate "2019-10-03T00:00:00+00:00"^^xsd:dateTime ;
+				:Tracking "inside-out markerless" ;
+				:Resolution "1440x1700" .
+
+###  http://www.semanticweb.org/marti/ontologies/2025/virtualreality#VarjoVR-2
+:VarjoVR-2 rdf:type owl:NamedIndividual ,
+				:HeadMountedDisplays ;
+				:connectedTo :VarjoVR-2 ;
+				:tracks :VarjoVR-2 ;
+				:supports :VarjoVR-2 ;
+				:renders :VarjoVR-2 ;
+				:providesData :VarjoVR-2 ;
+				:Name "VarjoVR-2" ;
+				:DisplayType "AMOLED, OLED" ;
+				:AspectRatio "9:10" ;
+				:FieldOfView "87º" ;
+				:RefreshRate "60 Hz (central display)90 Hz (peripheral display)" ;
+				:ReleaseDate "2019-10-15T00:00:00+00:00"^^xsd:dateTime ;
+				:Tracking "yes" ;
+				:Resolution "1440x1600" .
+
+###  http://www.semanticweb.org/marti/ontologies/2025/virtualreality#OculusQuest(OculusLink)
+:OculusQuest rdf:type owl:NamedIndividual ,
+				:HeadMountedDisplays ;
+				:connectedTo :OculusQuest ;
+				:tracks :OculusQuest ;
+				:supports :OculusQuest ;
+				:renders :OculusQuest ;
+				:providesData :OculusQuest ;
+				:Name "OculusQuest(OculusLink)" ;
+				:DisplayType "OLED" ;
+				:AspectRatio "9:10" ;
+				:FieldOfView "94º" ;
+				:RefreshRate "72 Hz" ;
+				:ReleaseDate "2019-11-18T00:00:00+00:00"^^xsd:dateTime ;
+				:Tracking "inside-out markerless" ;
+				:Resolution "1440x1600" .
+
+###  http://www.semanticweb.org/marti/ontologies/2025/virtualreality#OculusQuest2
+:OculusQuest2 rdf:type owl:NamedIndividual ,
+				:HeadMountedDisplays ;
+				:connectedTo :OculusQuest2 ;
+				:tracks :OculusQuest2 ;
+				:supports :OculusQuest2 ;
+				:renders :OculusQuest2;
+				:providesData :OculusQuest2 ;
+				:Name "OculusQuest2(OculusLink)" ;
+				:DisplayType "LCD" ;
+				:AspectRatio "229:240~23:24" ;
+				:FieldOfView "89°" ;
+				:RefreshRate "72 Hz80 Hz90 Hz120 Hz" ;
+				:ReleaseDate "2020-10-13T00:00:00+00:00"^^xsd:dateTime ;
+				:Tracking "inside-out markerless" ;
+				:Resolution "1832x1920" .
+
+###  http://www.semanticweb.org/marti/ontologies/2025/virtualreality#HPReverbG2
+:HPReverbG2 rdf:type owl:NamedIndividual ,
+				:HeadMountedDisplays ;
+				:connectedTo :HPReverbG2 ;
+				:tracks :HPReverbG2 ;
+				:supports :HPReverbG2 ;
+				:renders :HPReverbG2 ;
+				:providesData :HPReverbG2 ;
+				:Name "HPReverbG2" ;
+				:DisplayType "LCD" ;
+				:AspectRatio "1:1" ;
+				:FieldOfView "114º" ;
+				:RefreshRate "90 Hz" ;
+				:ReleaseDate "2000-01-01T00:00:00+00:00"^^xsd:dateTime ;
+				:Tracking "inside-out markerless" ;
+				:Resolution "2160x2160" .
+
+###  http://www.semanticweb.org/marti/ontologies/2025/virtualreality#HTCVivePro2
+:HTCVivePro2 rdf:type owl:NamedIndividual ,
+				:HeadMountedDisplays ;
+				:connectedTo :HTCVivePro2 ;
+				:tracks :HTCVivePro2 ;
+				:supports :HTCVivePro2 ;
+				:renders :HTCVivePro2 ;
+				:providesData :HTCVivePro2 ;
+				:Name "HTCVivePro2" ;
+				:DisplayType "LCD" ;
+				:AspectRatio "1:1" ;
+				:FieldOfView "120°" ;
+				:RefreshRate "90 Hz120 Hz" ;
+				:ReleaseDate "2021-06-04T00:00:00+00:00"^^xsd:dateTime ;
+				:Tracking "yes" ;
+				:Resolution "2448x2448" .
+
+###  http://www.semanticweb.org/marti/ontologies/2025/virtualreality#VarjoVR-3
+:VarjoVR-3 rdf:type owl:NamedIndividual ,
+				:HeadMountedDisplays ;
+				:connectedTo :VarjoVR-3 ;
+				:tracks :VarjoVR-3 ;
+				:supports :VarjoVR-3 ;
+				:renders :VarjoVR-3 ;
+				:providesData :VarjoVR-3 ;
+				:Name "VarjoVR-3" ;
+				:DisplayType "uOLED, LCD" ;
+				:AspectRatio "9:10" ;
+				:FieldOfView "115º" ;
+				:RefreshRate "60 Hz (central display)90 Hz (peripheral display)" ;
+				:ReleaseDate "2021-09-08T00:00:00+00:00"^^xsd:dateTime ;
+				:Tracking "yes" ;
+				:Resolution "2880x2720" .
+
+###  http://www.semanticweb.org/marti/ontologies/2025/virtualreality#PlayStationVR2
+:PlayStationVR2 rdf:type owl:NamedIndividual ,
+				:HeadMountedDisplays ;
+				:connectedTo :PlayStationVR2 ;
+				:tracks :PlayStationVR2 ;
+				:supports :PlayStationVR2 ;
+				:renders :PlayStationVR2 ;
+				:providesData :PlayStationVR2 ;
+				:Name "PlayStationVR2" ;
+				:DisplayType "OLED" ;
+				:AspectRatio "50:51" ;
+				:FieldOfView "110°" ;
+				:RefreshRate "90 Hz 120 Hz" ;
+				:ReleaseDate "2023-02-22T00:00:00+00:00"^^xsd:dateTime ;
+				:Tracking "yes" ;
+				:Resolution "2000x2040" .
+
+###  http://www.semanticweb.org/marti/ontologies/2025/virtualreality#ModalVR
+:ModalVR rdf:type owl:NamedIndividual ,
+				:HeadMountedDisplays ;
+				:connectedTo :ModalVR ;
+				:tracks :ModalVR ;
+				:supports :ModalVR ;
+				:renders :ModalVR ;
+				:providesData :ModalVR ;
+				:Name "ModalVR" ;
+				:DisplayType "Unknown" ;
+				:AspectRatio "Unknown" ;
+				:FieldOfView "Unknown" ;
+				:RefreshRate "Unknown" ;
+				:ReleaseDate "2000-01-01T00:00:00+00:00"^^xsd:dateTime ;
+				:Tracking "unknown" ;
+				:Resolution "Unknown" .
+
+###  http://www.semanticweb.org/marti/ontologies/2025/virtualreality#SamsungGearVR
+:SamsungGearVR rdf:type owl:NamedIndividual ,
+				:HeadMountedDisplays ;
+				:connectedTo :SamsungGearVR ;
+				:tracks :SamsungGearVR ;
+				:supports :SamsungGearVR ;
+				:renders :SamsungGearVR ;
+				:providesData :SamsungGearVR ;
+				:Name "SamsungGearVR" ;
+				:DisplayType "Super AMOLED**" ;
+				:AspectRatio "8:9" ;
+				:FieldOfView "96º" ;
+				:RefreshRate "Unknown" ;
+				:ReleaseDate "2015-11-01T00:00:00+00:00"^^xsd:dateTime ;
+				:Tracking "no" ;
+				:Resolution "1280x1440**" .
+
+###  http://www.semanticweb.org/marti/ontologies/2025/virtualreality#AvegantGlyph
+:AvegantGlyph rdf:type owl:NamedIndividual ,
+				:HeadMountedDisplays ;
+				:connectedTo :AvegantGlyph ;
+				:tracks :AvegantGlyph ;
+				:supports :AvegantGlyph ;
+				:renders :AvegantGlyph ;
+				:providesData :AvegantGlyph ;
+				:Name "AvegantGlyph" ;
+				:DisplayType "Unknown" ;
+				:AspectRatio "16:9" ;
+				:FieldOfView "Unknown" ;
+				:RefreshRate "Unknown" ;
+				:ReleaseDate "2000-01-01T00:00:00+00:00"^^xsd:dateTime ;
+				:Tracking "unknown" ;
+				:Resolution "1280×720" .
+
+###  http://www.semanticweb.org/marti/ontologies/2025/virtualreality#PicoVRGoblin
+:PicoVRGoblin rdf:type owl:NamedIndividual ,
+				:HeadMountedDisplays ;
+				:connectedTo :PicoVRGoblin ;
+				:tracks :PicoVRGoblin ;
+				:supports :PicoVRGoblin ;
+				:renders :PicoVRGoblin ;
+				:providesData :PicoVRGoblin ;
+				:Name "PicoVRGoblin" ;
+				:DisplayType "Unknown" ;
+				:AspectRatio "8:9" ;
+				:FieldOfView "90º" ;
+				:RefreshRate "70 Hz" ;
+				:ReleaseDate "2000-01-01T00:00:00+00:00"^^xsd:dateTime ;
+				:Tracking "no" ;
+				:Resolution "1280x1440" .
+
+###  http://www.semanticweb.org/marti/ontologies/2025/virtualreality#QualcommSnapdragonVR820
+:QualcommSnapdragonVR820 rdf:type owl:NamedIndividual ,
+				:HeadMountedDisplays ;
+				:connectedTo :QualcommSnapdragonVR820 ;
+				:tracks :QualcommSnapdragonVR820 ;
+				:supports :QualcommSnapdragonVR820 ;
+				:renders :QualcommSnapdragonVR820 ;
+				:providesData :QualcommSnapdragonVR820 ;
+				:Name "QualcommSnapdragonVR820" ;
+				:DisplayType "Unknown" ;
+				:AspectRatio "1:1" ;
+				:FieldOfView "Unknown" ;
+				:RefreshRate "70 Hz" ;
+				:ReleaseDate "2016-09-01T00:00:00+00:00"^^xsd:dateTime ;
+				:Tracking "inside-out" ;
+				:Resolution "1440x1440" .
+
+###  http://www.semanticweb.org/marti/ontologies/2025/virtualreality#AlcatelVision
+:AlcatelVision rdf:type owl:NamedIndividual ,
+				:HeadMountedDisplays ;
+				:connectedTo :AlcatelVision ;
+				:tracks :AlcatelVision ;
+				:supports :AlcatelVision ;
+				:renders :AlcatelVision ;
+				:providesData :AlcatelVision ;
+				:Name "AlcatelVision" ;
+				:DisplayType "Unknown" ;
+				:AspectRatio "18:17" ;
+				:FieldOfView "Unknown" ;
+				:RefreshRate "Unknown" ;
+				:ReleaseDate "2016-09-01T00:00:00+00:00"^^xsd:dateTime ;
+				:Tracking "unknown" ;
+				:Resolution "1080x1020" .
+
+###  http://www.semanticweb.org/marti/ontologies/2025/virtualreality#MicrosoftHololens
+:MicrosoftHololens rdf:type owl:NamedIndividual ,
+				:HeadMountedDisplays ;
+				:connectedTo :MicrosoftHololens ;
+				:tracks :MicrosoftHololens ;
+				:supports :MicrosoftHololens ;
+				:renders :MicrosoftHololens ;
+				:providesData :MicrosoftHololens ;
+				:Name "MicrosoftHololens" ;
+				:DisplayType "Unknown" ;
+				:AspectRatio "Unknown" ;
+				:FieldOfView "Unknown" ;
+				:RefreshRate "Unknown" ;
+				:ReleaseDate "2016-10-12T00:00:00+00:00"^^xsd:dateTime ;
+				:Tracking "inside-out" ;
+				:Resolution "Unknown" .
+
+###  http://www.semanticweb.org/marti/ontologies/2025/virtualreality#HELMETVISION
+:HELMETVISION rdf:type owl:NamedIndividual ,
+				:HeadMountedDisplays ;
+				:connectedTo :HELMETVISION ;
+				:tracks :HELMETVISION ;
+				:supports :HELMETVISION ;
+				:renders :HELMETVISION ;
+				:providesData :HELMETVISION ;
+				:Name "HELMETVISION" ;
+				:DisplayType "8 OLED" ;
+				:AspectRatio "16:10" ;
+				:FieldOfView "120° Horizontal" ;
+				:RefreshRate "Unknown" ;
+				:ReleaseDate "2016-11-02T00:00:00+00:00"^^xsd:dateTime ;
+				:Tracking "yes" ;
+				:Resolution "1920×1200" .
+
+###  http://www.semanticweb.org/marti/ontologies/2025/virtualreality#PicoNeoCV
+:PicoNeoCV rdf:type owl:NamedIndividual ,
+				:HeadMountedDisplays ;
+				:connectedTo :PicoNeoCV ;
+				:tracks :PicoNeoCV ;
+				:supports :PicoNeoCV ;
+				:renders :PicoNeoCV ;
+				:providesData :PicoNeoCV ;
+				:Name "PicoNeoCV" ;
+				:DisplayType "Unknown" ;
+				:AspectRatio "1:1" ;
+				:FieldOfView "102º" ;
+				:RefreshRate "90 Hz" ;
+				:ReleaseDate "2017-01-01T00:00:00+00:00"^^xsd:dateTime ;
+				:Tracking "yes" ;
+				:Resolution "1280×1080" .
+
+###  http://www.semanticweb.org/marti/ontologies/2025/virtualreality#QualcommSnapdragon835VRDK
+:QualcommSnapdragon835VRDK rdf:type owl:NamedIndividual ,
+				:HeadMountedDisplays ;
+				:connectedTo :QualcommSnapdragon835VRDK ;
+				:tracks :QualcommSnapdragon835VRDK ;
+				:supports :QualcommSnapdragon835VRDK ;
+				:renders :QualcommSnapdragon835VRDK ;
+				:providesData :QualcommSnapdragon835VRDK ;
+				:Name "QualcommSnapdragon835VRDK" ;
+				:DisplayType "Unknown" ;
+				:AspectRatio "1:1" ;
+				:FieldOfView "Unknown" ;
+				:RefreshRate "70 Hz" ;
+				:ReleaseDate "2017-02-01T00:00:00+00:00"^^xsd:dateTime ;
+				:Tracking "inside-out" ;
+				:Resolution "1440x1440" .
+
+###  http://www.semanticweb.org/marti/ontologies/2025/virtualreality#WoxterNeoVR100
+:WoxterNeoVR100 rdf:type owl:NamedIndividual ,
+				:HeadMountedDisplays ;
+				:connectedTo :WoxterNeoVR100 ;
+				:tracks :WoxterNeoVR100 ;
+				:supports :WoxterNeoVR100 ;
+				:renders :WoxterNeoVR100 ;
+				:providesData :WoxterNeoVR100 ;
+				:Name "WoxterNeoVR100" ;
+				:DisplayType "Unknown" ;
+				:AspectRatio "8:9" ;
+				:FieldOfView "Unknown" ;
+				:RefreshRate "Unknown" ;
+				:ReleaseDate "2000-01-01T00:00:00+00:00"^^xsd:dateTime ;
+				:Tracking "no" ;
+				:Resolution "960×1080" .
+
+###  http://www.semanticweb.org/marti/ontologies/2025/virtualreality#HTCViveFocus
+:HTCViveFocus rdf:type owl:NamedIndividual ,
+				:HeadMountedDisplays ;
+				:connectedTo :HTCViveFocus ;
+				:tracks :HTCViveFocus ;
+				:supports :HTCViveFocus ;
+				:renders :HTCViveFocus ;
+				:providesData :HTCViveFocus ;
+				:Name "HTCViveFocus" ;
+				:DisplayType "AMOLED" ;
+				:AspectRatio "9:10" ;
+				:FieldOfView "110º" ;
+				:RefreshRate "75 Hz" ;
+				:ReleaseDate "2000-01-01T00:00:00+00:00"^^xsd:dateTime ;
+				:Tracking "inside-out" ;
+				:Resolution "1440x1600" .
+
+###  http://www.semanticweb.org/marti/ontologies/2025/virtualreality#OculusGo
+:OculusGo rdf:type owl:NamedIndividual ,
+				:HeadMountedDisplays ;
+				:connectedTo :OculusGo ;
+				:tracks :OculusGo ;
+				:supports :OculusGo ;
+				:renders :OculusGo ;
+				:providesData :OculusGo ;
+				:Name "OculusGo" ;
+				:DisplayType "LCD" ;
+				:AspectRatio "8:9" ;
+				:FieldOfView "100º (estimate)" ;
+				:RefreshRate "72 Hz 60 Hz" ;
+				:ReleaseDate "2018-05-01T00:00:00+00:00"^^xsd:dateTime ;
+				:Tracking "no" ;
+				:Resolution "1280x1440" .
+
+###  http://www.semanticweb.org/marti/ontologies/2025/virtualreality#LenovoMirageSolo
+:LenovoMirageSolo rdf:type owl:NamedIndividual ,
+				:HeadMountedDisplays ;
+				:connectedTo :LenovoMirageSolo ;
+				:tracks :LenovoMirageSolo ;
+				:supports :LenovoMirageSolo ;
+				:renders :LenovoMirageSolo ;
+				:providesData :LenovoMirageSolo ;
+				:Name "LenovoMirageSolo" ;
+				:DisplayType "LCD" ;
+				:AspectRatio "8:9" ;
+				:FieldOfView "110º" ;
+				:RefreshRate "75 Hz" ;
+				:ReleaseDate "2018-05-05T00:00:00+00:00"^^xsd:dateTime ;
+				:Tracking "inside-out" ;
+				:Resolution "1280x1440" .
+
+###  http://www.semanticweb.org/marti/ontologies/2025/virtualreality#GFLDeveloperKit
+:GFLDeveloperKit rdf:type owl:NamedIndividual ,
+				:HeadMountedDisplays ;
+				:connectedTo :GFLDeveloperKit ;
+				:tracks :GFLDeveloperKit ;
+				:supports :GFLDeveloperKit ;
+				:renders :GFLDeveloperKit ;
+				:providesData :GFLDeveloperKit ;
+				:Name "GFLDeveloperKit" ;
+				:DisplayType "OLED" ;
+				:AspectRatio "16:9" ;
+				:FieldOfView "110º" ;
+				:RefreshRate "Unknown" ;
+				:ReleaseDate "2018-05-24T00:00:00+00:00"^^xsd:dateTime ;
+				:Tracking "inside-out markerless (lighthouse)" ;
+				:Resolution "1280x1440" .
+
+###  http://www.semanticweb.org/marti/ontologies/2025/virtualreality#GoogleDaydreamView
+:GoogleDaydreamView rdf:type owl:NamedIndividual ,
+				:HeadMountedDisplays ;
+				:connectedTo :GoogleDaydreamView ;
+				:tracks :GoogleDaydreamView ;
+				:supports :GoogleDaydreamView ;
+				:renders :GoogleDaydreamView ;
+				:providesData :GoogleDaydreamView ;
+				:Name "GoogleDaydreamView" ;
+				:DisplayType "Mobile Screen" ;
+				:AspectRatio "Depends on device" ;
+				:FieldOfView "100º" ;
+				:RefreshRate "Depends on device" ;
+				:ReleaseDate "2018-10-17T00:00:00+00:00"^^xsd:dateTime ;
+				:Tracking "no" ;
+				:Resolution "Depends on device" .
+
+###  http://www.semanticweb.org/marti/ontologies/2025/virtualreality#PicoG24K
+:PicoG24K rdf:type owl:NamedIndividual ,
+				:HeadMountedDisplays ;
+				:connectedTo :PicoG24K ;
+				:tracks :PicoG24K ;
+				:supports :PicoG24K ;
+				:renders :PicoG24K ;
+				:providesData :PicoG24K ;
+				:Name "PicoG24K" ;
+				:DisplayType "LCD" ;
+				:AspectRatio "8:9" ;
+				:FieldOfView "101º" ;
+				:RefreshRate "75 Hz" ;
+				:ReleaseDate "2019-03-27T00:00:00+00:00"^^xsd:dateTime ;
+				:Tracking "no" ;
+				:Resolution "1920x2160" .
+
+###  http://www.semanticweb.org/marti/ontologies/2025/virtualreality#OculusQuest
+:OculusQuest rdf:type owl:NamedIndividual ,
+				:HeadMountedDisplays ;
+				:connectedTo :OculusQuest ;
+				:tracks :OculusQuest ;
+				:supports :OculusQuest ;
+				:renders :OculusQuest ;
+				:providesData :OculusQuest ;
+				:Name "OculusQuest" ;
+				:DisplayType "OLED" ;
+				:AspectRatio "9:10" ;
+				:FieldOfView "94º" ;
+				:RefreshRate "72 Hz" ;
+				:ReleaseDate "2019-05-21T00:00:00+00:00"^^xsd:dateTime ;
+				:Tracking "inside-out" ;
+				:Resolution "1440x1600" .
+
+###  http://www.semanticweb.org/marti/ontologies/2025/virtualreality#OculusQuest2
+:OculusQuest2 rdf:type owl:NamedIndividual ,
+				:HeadMountedDisplays ;
+				:connectedTo :OculusQuest2 ;
+				:tracks :OculusQuest2 ;
+				:supports :OculusQuest2 ;
+				:renders :OculusQuest2 ;
+				:providesData :OculusQuest2 ;
+				:Name "OculusQuest2" ;
+				:DisplayType "LCD" ;
+				:AspectRatio "Unknown" ;
+				:FieldOfView "89°" ;
+				:RefreshRate "120 Hz 90 Hz 72 Hz 60 Hz" ;
+				:ReleaseDate "2020-10-13T00:00:00+00:00"^^xsd:dateTime ;
+				:Tracking "inside-out" ;
+				:Resolution "1832x1920" .
+
+###  http://www.semanticweb.org/marti/ontologies/2025/virtualreality#HTCViveFocus3
+:HTCViveFocus3 rdf:type owl:NamedIndividual ,
+				:HeadMountedDisplays ;
+				:connectedTo :HTCViveFocus3 ;
+				:tracks :HTCViveFocus3 ;
+				:supports :HTCViveFocus3 ;
+				:renders :HTCViveFocus3 ;
+				:providesData :HTCViveFocus3 ;
+				:Name "HTCViveFocus3" ;
+				:DisplayType "LCD" ;
+				:AspectRatio "1:1" ;
+				:FieldOfView "120°" ;
+				:RefreshRate "90 Hz" ;
+				:ReleaseDate "2021-06-27T00:00:00+00:00"^^xsd:dateTime ;
+				:Tracking "inside-out" ;
+				:Resolution "2448x2448" .
+
+###  http://www.semanticweb.org/marti/ontologies/2025/virtualreality#PicoNeo3Pro
+:PicoNeo3Pro rdf:type owl:NamedIndividual ,
+				:HeadMountedDisplays ;
+				:connectedTo :PicoNeo3Pro ;
+				:tracks :PicoNeo3Pro ;
+				:supports :PicoNeo3Pro ;
+				:renders :PicoNeo3Pro ;
+				:providesData :PicoNeo3Pro ;
+				:Name "PicoNeo3Pro" ;
+				:DisplayType "LCD" ;
+				:AspectRatio "Unknown" ;
+				:FieldOfView "98º" ;
+				:RefreshRate "90 Hz" ;
+				:ReleaseDate "2021-10-01T00:00:00+00:00"^^xsd:dateTime ;
+				:Tracking "inside-out" ;
+				:Resolution "1832x1920" .
+
+###  http://www.semanticweb.org/marti/ontologies/2025/virtualreality#HTCViveFlow
+:HTCViveFlow rdf:type owl:NamedIndividual ,
+				:HeadMountedDisplays ;
+				:connectedTo :HTCViveFlow ;
+				:tracks :HTCViveFlow ;
+				:supports :HTCViveFlow ;
+				:renders :HTCViveFlow ;
+				:providesData :HTCViveFlow ;
+				:Name "HTCViveFlow" ;
+				:DisplayType "LCD" ;
+				:AspectRatio "Unknown" ;
+				:FieldOfView "100º" ;
+				:RefreshRate "75 Hz" ;
+				:ReleaseDate "2022-03-01T00:00:00+00:00"^^xsd:dateTime ;
+				:Tracking "inside-out" ;
+				:Resolution "1600x1600" .
+
+###  http://www.semanticweb.org/marti/ontologies/2025/virtualreality#LenovoThinkRealityVRX
+:LenovoThinkRealityVRX rdf:type owl:NamedIndividual ,
+				:HeadMountedDisplays ;
+				:connectedTo :LenovoThinkRealityVRX ;
+				:tracks :LenovoThinkRealityVRX ;
+				:supports :LenovoThinkRealityVRX ;
+				:renders :LenovoThinkRealityVRX ;
+				:providesData :LenovoThinkRealityVRX ;
+				:Name "LenovoThinkRealityVRX" ;
+				:DisplayType "Unknown" ;
+				:AspectRatio "Unknown" ;
+				:FieldOfView "95º" ;
+				:RefreshRate "70 Hz 90 Hz" ;
+				:ReleaseDate "2000-01-01T00:00:00+00:00"^^xsd:dateTime ;
+				:Tracking "inside-out" ;
+				:Resolution "2280 x 2280" .
+
+###  http://www.semanticweb.org/marti/ontologies/2025/virtualreality#PICO4
+:PICO4 rdf:type owl:NamedIndividual ,
+				:HeadMountedDisplays ;
+				:connectedTo :PICO4 ;
+				:tracks :PICO4 ;
+				:supports :PICO4 ;
+				:renders :PICO4 ;
+				:providesData :PICO4 ;
+				:Name "PICO4" ;
+				:DisplayType "LCD" ;
+				:AspectRatio "1:1" ;
+				:FieldOfView "105°" ;
+				:RefreshRate "72 Hz 90 Hz" ;
+				:ReleaseDate "2022-10-18T00:00:00+00:00"^^xsd:dateTime ;
+				:Tracking "inside-out" ;
+				:Resolution "2160x2160" .
+
+###  http://www.semanticweb.org/marti/ontologies/2025/virtualreality#MetaQuestPro
+:MetaQuestPro rdf:type owl:NamedIndividual ,
+				:HeadMountedDisplays ;
+				:connectedTo :MetaQuestPro ;
+				:tracks :MetaQuestPro ;
+				:supports :MetaQuestPro ;
+				:renders :MetaQuestPro ;
+				:providesData :MetaQuestPro ;
+				:Name "MetaQuestPro" ;
+				:DisplayType "Mini-LED" ;
+				:AspectRatio "Unknown" ;
+				:FieldOfView "106º Horizontal 96º Vertical" ;
+				:RefreshRate "72 Hz 90 Hz" ;
+				:ReleaseDate "2022-10-25T00:00:00+00:00"^^xsd:dateTime ;
+				:Tracking "inside-out" ;
+				:Resolution "1800×1920" .
+
+###  http://www.semanticweb.org/marti/ontologies/2025/virtualreality#HTCVIVEXRElite
+:HTCVIVEXRElite rdf:type owl:NamedIndividual ,
+				:HeadMountedDisplays ;
+				:connectedTo :HTCVIVEXRElite ;
+				:tracks :HTCVIVEXRElite ;
+				:supports :HTCVIVEXRElite ;
+				:renders :HTCVIVEXRElite ;
+				:providesData :HTCVIVEXRElite ;
+				:Name "HTCVIVEXRElite" ;
+				:DisplayType "LCD" ;
+				:AspectRatio "Unknown" ;
+				:FieldOfView "110°" ;
+				:RefreshRate "90 Hz" ;
+				:ReleaseDate "2023-02-25T00:00:00+00:00"^^xsd:dateTime ;
+				:Tracking "inside-out" ;
+				:Resolution "1920 x 1920" .
+
+###  http://www.semanticweb.org/marti/ontologies/2025/virtualreality#BigscreenBeyond
+:BigscreenBeyond rdf:type owl:NamedIndividual ,
+				:HeadMountedDisplays ;
+				:connectedTo :BigscreenBeyond ;
+				:tracks :BigscreenBeyond ;
+				:supports :BigscreenBeyond ;
+				:renders :BigscreenBeyond ;
+				:providesData :BigscreenBeyond ;
+				:Name "BigscreenBeyond" ;
+				:DisplayType "OLED" ;
+				:AspectRatio "1:1" ;
+				:FieldOfView "102° Horizontal 90° Vertical" ;
+				:RefreshRate "75 Hz/90 Hz" ;
+				:ReleaseDate "2023-09-07T00:00:00+00:00"^^xsd:dateTime ;
+				:Tracking "yes" ;
+				:Resolution "2560 x 2560" .
+
+###  http://www.semanticweb.org/marti/ontologies/2025/virtualreality#MetaQuest3
+:MetaQuest3 rdf:type owl:NamedIndividual ,
+				:HeadMountedDisplays ;
+				:connectedTo :MetaQuest3 ;
+				:tracks :MetaQuest3 ;
+				:supports :MetaQuest3 ;
+				:renders :MetaQuest3 ;
+				:providesData :MetaQuest3 ;
+				:Name "MetaQuest3" ;
+				:DisplayType "LCD" ;
+				:AspectRatio "Unknown" ;
+				:FieldOfView "110° Horizontal 96° Vertical" ;
+				:RefreshRate "90 Hz/120 Hz" ;
+				:ReleaseDate "2023-10-10T00:00:00+00:00"^^xsd:dateTime ;
+				:Tracking "inside-out" ;
+				:Resolution "2064 x 2208" .
+
+###  http://www.semanticweb.org/marti/ontologies/2025/virtualreality#VarjoXR4
+:VarjoXR4 rdf:type owl:NamedIndividual ,
+				:HeadMountedDisplays ;
+				:connectedTo :VarjoXR4 ;
+				:tracks :VarjoXR4 ;
+				:supports :VarjoXR4 ;
+				:renders :VarjoXR4 ;
+				:providesData :VarjoXR4 ;
+				:Name "VarjoXR4" ;
+				:DisplayType "mini-LED" ;
+				:AspectRatio "16:9" ;
+				:FieldOfView "120°(Horizontal) 105°(Vertical)" ;
+				:RefreshRate "90 Hz" ;
+				:ReleaseDate "2023-11-27T00:00:00+00:00"^^xsd:dateTime ;
+				:Tracking "inside-out" ;
+				:Resolution "3840x3744" .
+
+###  http://www.semanticweb.org/marti/ontologies/2025/virtualreality#AppleVisionPro
+:AppleVisionPro rdf:type owl:NamedIndividual ,
+				:HeadMountedDisplays ;
+				:connectedTo :AppleVisionPro ;
+				:tracks :AppleVisionPro ;
+				:supports :AppleVisionPro ;
+				:renders :AppleVisionPro ;
+				:providesData :AppleVisionPro ;
+				:Name "AppleVisionPro" ;
+				:DisplayType "OLED" ;
+				:AspectRatio "Unknown" ;
+				:FieldOfView "100° Horizontal" ;
+				:RefreshRate "90 Hz/96 Hz/100 Hz" ;
+				:ReleaseDate "2024-02-02T00:00:00+00:00"^^xsd:dateTime ;
+				:Tracking "inside-out" ;
+				:Resolution "3680x3140 (estimated based on 23 million pixels and 7:6 aspect ratio)" .
 
 
 ###  http://www.semanticweb.org/marti/ontologies/2025/virtualreality/AsusROGPhone
@@ -915,19 +2033,12 @@
                        :HandheldDisplays .
 
 
-###  http://www.semanticweb.org/marti/ontologies/2025/virtualreality/AvegantGlyph
-:AvegantGlyph rdf:type owl:NamedIndividual ,
-                       :HeadAttached .
-
 
 ###  http://www.semanticweb.org/marti/ontologies/2025/virtualreality/BALMUDABALMUDAPhone
 :BALMUDABALMUDAPhone rdf:type owl:NamedIndividual ,
                               :HandheldDisplays .
 
 
-###  http://www.semanticweb.org/marti/ontologies/2025/virtualreality/BigscreenBeyond
-:BigscreenBeyond rdf:type owl:NamedIndividual ,
-                          :HeadAttached .
 
 
 ###  http://www.semanticweb.org/marti/ontologies/2025/virtualreality/BluVivoXL4
@@ -940,14 +2051,6 @@
                                :HandheldDisplays .
 
 
-###  http://www.semanticweb.org/marti/ontologies/2025/virtualreality/DeepoonVRE3
-:DeepoonVRE3 rdf:type owl:NamedIndividual ,
-                      :HeadAttached .
-
-
-###  http://www.semanticweb.org/marti/ontologies/2025/virtualreality/DellVisor
-:DellVisor rdf:type owl:NamedIndividual ,
-                    :HeadAttached .
 
 
 ###  http://www.semanticweb.org/marti/ontologies/2025/virtualreality/FCNTarrowsBZ03
@@ -975,10 +2078,6 @@
                             :HandheldDisplays .
 
 
-###  http://www.semanticweb.org/marti/ontologies/2025/virtualreality/Fove0
-:Fove0 rdf:type owl:NamedIndividual ,
-                :HeadAttached .
-
 
 ###  http://www.semanticweb.org/marti/ontologies/2025/virtualreality/FujitsuF-51A
 :FujitsuF-51A rdf:type owl:NamedIndividual ,
@@ -990,9 +2089,6 @@
                                 :HandheldDisplays .
 
 
-###  http://www.semanticweb.org/marti/ontologies/2025/virtualreality/GFLDeveloperKit
-:GFLDeveloperKit rdf:type owl:NamedIndividual ,
-                          :HeadAttached .
 
 
 ###  http://www.semanticweb.org/marti/ontologies/2025/virtualreality/GeneralMobileGM9Plus
@@ -1125,29 +2221,10 @@
                         :HandheldDisplays .
 
 
-###  http://www.semanticweb.org/marti/ontologies/2025/virtualreality/HELMETVISION
-:HELMETVISION rdf:type owl:NamedIndividual ,
-                       :HeadAttached .
-
-
-###  http://www.semanticweb.org/marti/ontologies/2025/virtualreality/HPReverb
-:HPReverb rdf:type owl:NamedIndividual ,
-                   :HeadAttached .
-
-
-###  http://www.semanticweb.org/marti/ontologies/2025/virtualreality/HPReverbG2
-:HPReverbG2 rdf:type owl:NamedIndividual ,
-                     :HeadAttached .
-
 
 ###  http://www.semanticweb.org/marti/ontologies/2025/virtualreality/HPReverbG2Controller
 :HPReverbG2Controller rdf:type owl:NamedIndividual ,
                                :Controllers .
-
-
-###  http://www.semanticweb.org/marti/ontologies/2025/virtualreality/HPWMRheadset
-:HPWMRheadset rdf:type owl:NamedIndividual ,
-                       :HeadAttached .
 
 
 ###  http://www.semanticweb.org/marti/ontologies/2025/virtualreality/HTCHTCDesire21Pro5G
@@ -1170,11 +2247,6 @@
                          :HeadAttached .
 
 
-###  http://www.semanticweb.org/marti/ontologies/2025/virtualreality/HTCVive
-:HTCVive rdf:type owl:NamedIndividual ,
-                  :HeadAttached .
-
-
 ###  http://www.semanticweb.org/marti/ontologies/2025/virtualreality/HTCViveController
 :HTCViveController rdf:type owl:NamedIndividual ,
                             :Controllers .
@@ -1185,39 +2257,12 @@
                                :Controllers .
 
 
-###  http://www.semanticweb.org/marti/ontologies/2025/virtualreality/HTCViveCosmos
-:HTCViveCosmos rdf:type owl:NamedIndividual ,
-                        :HeadAttached .
 
 
 ###  http://www.semanticweb.org/marti/ontologies/2025/virtualreality/HTCViveCosmosController
 :HTCViveCosmosController rdf:type owl:NamedIndividual ,
                                   :Controllers .
 
-
-###  http://www.semanticweb.org/marti/ontologies/2025/virtualreality/HTCViveFlow
-:HTCViveFlow rdf:type owl:NamedIndividual ,
-                      :HeadAttached .
-
-
-###  http://www.semanticweb.org/marti/ontologies/2025/virtualreality/HTCViveFocus
-:HTCViveFocus rdf:type owl:NamedIndividual ,
-                       :HeadAttached .
-
-
-###  http://www.semanticweb.org/marti/ontologies/2025/virtualreality/HTCViveFocus3
-:HTCViveFocus3 rdf:type owl:NamedIndividual ,
-                        :HeadAttached .
-
-
-###  http://www.semanticweb.org/marti/ontologies/2025/virtualreality/HTCVivePro
-:HTCVivePro rdf:type owl:NamedIndividual ,
-                     :HeadAttached .
-
-
-###  http://www.semanticweb.org/marti/ontologies/2025/virtualreality/HTCVivePro2
-:HTCVivePro2 rdf:type owl:NamedIndividual ,
-                      :HeadAttached .
 
 
 ###  http://www.semanticweb.org/marti/ontologies/2025/virtualreality/HTCViveProController
@@ -1915,10 +2960,6 @@
                            :Controllers .
 
 
-###  http://www.semanticweb.org/marti/ontologies/2025/virtualreality/ModalVR
-:ModalVR rdf:type owl:NamedIndividual ,
-                  :HeadAttached .
-
 
 ###  http://www.semanticweb.org/marti/ontologies/2025/virtualreality/MotorolaLenovoK12Pro
 :MotorolaLenovoK12Pro rdf:type owl:NamedIndividual ,
@@ -2478,36 +3519,6 @@
 ###  http://www.semanticweb.org/marti/ontologies/2025/virtualreality/NothingNothingPhone2
 :NothingNothingPhone2 rdf:type owl:NamedIndividual ,
                                :HandheldDisplays .
-
-
-###  http://www.semanticweb.org/marti/ontologies/2025/virtualreality/OculusGo
-:OculusGo rdf:type owl:NamedIndividual ,
-                   :HeadAttached .
-
-
-###  http://www.semanticweb.org/marti/ontologies/2025/virtualreality/OculusQuest
-:OculusQuest rdf:type owl:NamedIndividual ,
-                      :HeadAttached .
-
-
-###  http://www.semanticweb.org/marti/ontologies/2025/virtualreality/OculusQuest2
-:OculusQuest2 rdf:type owl:NamedIndividual ,
-                       :HeadAttached .
-
-
-###  http://www.semanticweb.org/marti/ontologies/2025/virtualreality/OculusQuestOculusLink
-:OculusQuestOculusLink rdf:type owl:NamedIndividual ,
-                                :HeadAttached .
-
-
-###  http://www.semanticweb.org/marti/ontologies/2025/virtualreality/OculusRiftCV1
-:OculusRiftCV1 rdf:type owl:NamedIndividual ,
-                        :HeadAttached .
-
-
-###  http://www.semanticweb.org/marti/ontologies/2025/virtualreality/OculusRiftS
-:OculusRiftS rdf:type owl:NamedIndividual ,
-                      :HeadAttached .
 
 
 ###  http://www.semanticweb.org/marti/ontologies/2025/virtualreality/OculusTouchCV1
